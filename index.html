@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather</title>
+    <link rel="Icon" type="img/png" href="https://cdn.jim-nielsen.com/ios/1024/weather-2017-06-19.png?rf=1024">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="search-section">
+            <h1 class="logo">
+                 <img src="https://cdn.jim-nielsen.com/ios/1024/weather-2017-06-19.png?rf=1024" alt="Logo" class="title-icon">
+            Weather
+            </h1>
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Enter city name..." autocomplete="off">
+                <ul id="suggestions" class="dropdown"></ul>
+                <button id="searchBtn">Search</button>
+            </div>
+        </div>
+        
+
+        <div id="weatherCard" class="weather-snippet" style="display: none;">
+            <div class="weather-main">
+                <img src="" id="wIcon" alt="Weather Icon">
+                <div>
+                    <h2 id="wTemp">--°C</h2>
+                    <p id="wCity">City</p>
+                    <p id="wDesc" style="text-transform: capitalize; color: #5f6368;">Condition</p>
+                </div>
+            </div>
+            <div class="w-details">
+                <div class="detail-item">
+                    <strong>Humidity</strong>
+                    <span id="wHum">--%</span>
+                </div>
+                <div class="detail-item">
+                    <strong>Wind Speed</strong>
+                    <span id="wWind">-- km/h</span>
+                </div>
+            </div>
+        </div>
+
+        <div id="errorMsg" style="display: none; color: #ea4335; text-align: center; margin-top: 20px;">
+            City not found. Please try again.
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
